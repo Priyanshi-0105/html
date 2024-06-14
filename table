@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <table>
+            <tr>
+                <td>name </td>
+                <td>address</td>
+                <td>Phone</td>
+             
+            </tr>
+            <table>
+    </body>
+</html>

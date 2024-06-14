@@ -1,0 +1,99 @@
+<html>
+
+<head>
+    <title>company portfolio</title>
+    <link rel="stylesheet" href="company.css/company_portfolio.css">
+</head>
+
+<body>
+    <header>
+        <div class="header.content">
+            <img class="logo" src="images/logo.png" />
+            <h1 class="site-name">instagram</h1>
+            <div class="search-container">
+                <input type="text" placeholder="search" class="search-bar">
+                <button class="search-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#FFFFFF">
+                        <path
+                            d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z" />
+                    </svg>
+                </button>
+            </div>
+
+
+    </header>
+    <div class="container">
+
+        <aside class="aside left">
+            <h2>left aside</h2>
+            <nav>
+                <ul>
+                    <li id="home"><a href="#">home</a></li>
+                    <li id="our_team"><a href="#">our team</a></li>
+                    <li id="our_project"><a href="#"> our projects</a></li>
+                    <li id="our_goals"><a href="#">our goals</a></li>
+                    <li id="about_us"><a href="#"> about us</a></li>
+                </ul>
+            </nav>
+
+        </aside>
+        <main id="main-content">
+
+        </main>
+
+        <aside class="aside right">
+            <h2>right aside</h2>
+        </aside>
+
+    </div>
+
+    <script>
+        function loadContent(url) {
+            fetch(url)
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('main-content').innerHTML = data;
+                })
+                .catch(error => console.error('Error fetching content:', error));
+        }
+
+        loadContent("home.html");
+
+        // Get references to the <li> elements
+        const homeLi = document.getElementById("home");
+        const teamLi = document.getElementById("our_team");
+        const projectLi = document.getElementById("our_project");
+        const aboutLi = document.getElementById("about_us");
+        const goalLi = document.getElementById("our_goals");
+
+        // Get reference to the main content area
+        const mainContent = document.getElementById("main-content");
+
+        // Add event listeners to the <li> elements
+        homeLi.addEventListener("click", () => {
+            const homeLi = document.getElementById("home");
+            loadContent("home.html");
+        });
+
+        teamLi.addEventListener("click", () => {
+            loadContent("team.html");
+        });
+
+        projectLi.addEventListener("click", () => {
+            loadContent("project.html");
+        });
+
+        aboutLi.addEventListener("click", () => {
+            loadContent("about_us.html");
+        });
+
+        goalLi.addEventListener("click", () => {
+            loadContent("goal.html");
+        });
+
+    </script>
+
+</body>
+
+</html>

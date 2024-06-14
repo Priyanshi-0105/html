@@ -1,0 +1,46 @@
+h2 {
+    text-align: center;
+    font-family: sans-serif;
+
+
+}
+
+
+
+body {
+    background-color: aqua;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+img {
+    height: 250px;
+    width: 300px;
+}
+
+.img_division {
+    display: flex;
+    flex-direction: row;
+    gap: 20PX;
+    justify-content: center;
+}
+
+.div_division {
+    display: flex;
+    flex-direction: row;
+    gap: 20PX;
+    justify-content: center;
+}
+
+form {
+    text-align: center;
+}
+
+label {
+    font-family: sans-serif;
+}
+
+a {
+    font-family: sans-serif;
+
+}
